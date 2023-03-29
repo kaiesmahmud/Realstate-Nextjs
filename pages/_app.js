@@ -5,7 +5,7 @@ import { Router } from 'next/router'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 //chakra ui
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 //nProgress
 import nProgress from 'nprogress'
 
@@ -30,11 +30,13 @@ export default function App({ Component, pageProps }) {
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css' integrity='sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==' crossOrigin='anonymous' referrerPolicy='no-referrer' />
       </Head>
       <ChakraProvider>
-        <header>
-          <Navbar/>
-        </header>
-        <Component {...pageProps} />
-        <Footer/>
+        <Box maxWidth='1280px' m='auto' backgroundColor={'white'}>
+          <header>
+            <Navbar/>
+          </header>
+          <Component {...pageProps} />
+          <Footer/>
+        </Box>
       </ChakraProvider>
     </>
   )
