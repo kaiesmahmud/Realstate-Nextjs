@@ -1,7 +1,7 @@
 //Next elements
 import Link from "next/link"
 //cakra ui
-import { Box, Flex, Icon, IconButton, Menu, MenuButton, MenuItem, MenuList, Spacer } from "@chakra-ui/react"
+import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Spacer } from "@chakra-ui/react"
 // react icons
 import {FcMenu, FcHome, FcAbout} from 'react-icons/fc'
 import {BsSearch} from 'react-icons/bs'

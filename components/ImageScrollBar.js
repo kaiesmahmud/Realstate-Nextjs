@@ -26,7 +26,6 @@ const ImageScrollBar = ({data}) => {
             }
         </HorizontalScroll>
     </Box>
-
       
   )
 }

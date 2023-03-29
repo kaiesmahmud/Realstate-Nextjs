@@ -1,15 +1,11 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import  { useState } from 'react'
 
 //chakra ui
-import { Box, Flex, Text, Icon, Select, Spinner } from '@chakra-ui/react'
+import { Box, Flex, Select } from '@chakra-ui/react'
 
 //Next element
-import Image from 'next/image'
 import { useRouter } from 'next/router'
-
-//react-icons
-import {MdCancel} from 'react-icons/md'
 
 //filterData from utils
 import { filterData, getFilterValues } from '@/utils/filterData'
