@@ -36,11 +36,13 @@ const Property = ({property: {coverPhoto, price, rentFrequency, rooms, title, ba
                         </Text>
                     </Flex>
                     <box>
-                        <Avatar size="sm" src={agency?.logo?.url} />
+                        <Avatar size="md" src={agency?.logo?.url} />
                     </box>
                 </Flex>
                 <Flex alignItems="center" p="1" justifyContent="space-between" w="250" color="blue.400">
-                    {rooms} <FaBed/> | {baths} <FaBath/> | {millify(area)} sqft <BsGridFill/>
+                    <Flex gap={3} alignItems="center">{rooms} <FaBed/> </Flex>|
+                    <Flex gap={3} alignItems="center"> {baths} <FaBath/> </Flex>|
+                    <Flex gap={3} alignItems="center">{millify(area)} sqft <BsGridFill/></Flex>
                 </Flex>
                 <Text fontSize="lg">
                     {title.length > 30 ? `${title.substr(0,30)}...` : title }
