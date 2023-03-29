@@ -49,7 +49,7 @@ const search = ({properties}) => {
         </Text>
         <Flex flexWrap="wrap" alignSelf="center" alignItems="center" justifyContent="center">
             {
-                properties.map((property)=> <Property property={property} />)
+                properties.map((property,i)=> <Property property={property} key={i} />)
             }
         </Flex>
         {
