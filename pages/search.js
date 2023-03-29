@@ -42,9 +42,6 @@ const search = ({properties}) => {
             <Icon paddingLeft='2' w='7' as={BsFilter} />
         </Flex>
         {
-            searchFilters && "hello"
-        }
-        {
             searchFilters && <SearchFilters />
         }
         <Text fontSize="2xl" p="4" fontWeight="bold" >
