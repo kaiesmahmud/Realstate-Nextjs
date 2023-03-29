@@ -21,7 +21,30 @@ const Property = ({property: {coverPhoto, price, rentFrequency, rooms, title, ba
         {title}
         <Flex flexWrap="wrap" w="420px" p="5" pt="0" justifyContent="flex-start" cursor="pointer">
             <Box>
-                <Image src={coverPhoto ? coverPhoto.url : defaultImg } />
+                <Image src={coverPhoto ? coverPhoto.url : defaultImg } height={260} width={400} alt="house" />
+            </Box>
+            <Box w="full">
+                <Flex pt={2} alignItems="center" justifyContent="space-between">
+                    <Flex alignItems="center">
+                        <Box>
+                            {
+                                isVerified && <GoVerified/>
+                            }
+                        </Box>
+                        <Text fontWeight="bold" fontSize="lg">
+                            AED {millify(price)}{rentFrequency && `/${rentFrequency}`}
+                        </Text>
+                    </Flex>
+                    <box>
+                        <Avatar size="sm" src={agency?.logo?.url} />
+                    </box>
+                </Flex>
+                <Flex alignItems="center" p="1" justifyContent="space-between" w="250" color="blue.400">
+                    {rooms} <FaBed/> | {baths} <FaBath/> | {millify(area)} sqft <BsGridFill/>
+                </Flex>
+                <Text fontSize="lg">
+                    {title.length > 30 ? `${title.substr(0,30)}...` : title }
+                </Text>
             </Box>
         </Flex>
     </Link>
