@@ -1,8 +1,13 @@
-import { baseUrl, fetchApi } from '@/utils/fetchApi'
-import { Box, Button, Flex, Text } from '@chakra-ui/react'
+//Next elements
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+//components
+import Property from '@/components/Property'
+//fetchapi from utils
+import { baseUrl, fetchApi } from '@/utils/fetchApi'
+//chakra ui
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 
 const Banner = ({purpose, imageUrl, title1, title2, desc1, desc2, linkName, buttonText}) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
@@ -44,6 +49,9 @@ export default function Home({propertiesForSale, propertiesForRent }) {
           />
           <Flex flexWrap="wrap">
             {/* Fetch properties and map over them */}
+            {
+              propertiesForRent.map((property)=> <Property property={property} key={property.id} />) 
+            }
           </Flex>
           <Banner
           purpose="BUY A HOME"
@@ -57,6 +65,9 @@ export default function Home({propertiesForSale, propertiesForRent }) {
           />
           <Flex flexWrap="wrap">
             {/* Fetch properties and map over them */}
+            {
+              propertiesForSale.map((property)=> <Property property={property} key={property.id} />) 
+            }
           </Flex>
         </Box>
       </main>
