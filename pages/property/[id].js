@@ -22,7 +22,9 @@ const PropertyDetails = ({PropertyDetails: {
     
   return (
     <Box maxWidth='1000px' margin='auto' p='4'>
-    {photos && <ImageScrollBar data={photos} />}
+    {
+        photos && <ImageScrollBar data={photos} />
+    }
     <Box w='full' p='6'>
       <Flex paddingTop='2' alignItems='center'>
         <Box paddingRight='3' color='green.400'>{isVerified && <GoVerified />}</Box>
@@ -49,7 +51,8 @@ const PropertyDetails = ({PropertyDetails: {
         <Text>Purpose</Text>
         <Text fontWeight='bold'>{purpose}</Text>
       </Flex>
-      {furnishingStatus && (
+      {
+      furnishingStatus && (
         <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3' >
           <Text>Furnishing Status</Text>
           <Text fontWeight='bold'>{furnishingStatus}</Text>
