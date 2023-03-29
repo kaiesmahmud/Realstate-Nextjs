@@ -1,5 +1,4 @@
 //Next elements
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 //components
@@ -29,12 +28,6 @@ export default function Home({propertiesForSale, propertiesForRent }) {
   console.log(propertiesForSale)
   return (
     <>
-      <Head>
-        <title>Real State App- Nextjs - Nehal</title>
-        <meta name="description" content="RealState app is created by Nehal using nextjs(reactjs framework)" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Box>
           <Banner
